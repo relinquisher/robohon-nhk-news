@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+    <head>
+        <producer>com.robohon.nhknews</producer>
+        <description>ニュース読み上げシナリオ</description>
+        <scene value="com.robohon.nhknews.scene_common"/>
+        <version value="1.0"/>
+        <accost priority="75" topic_id="speak"
+                word="com.robohon.nhknews.news.read"/>
+    </head>
+    <body>
+        <!--ニューステキストを発話内容に合わせたモーション付きで発話し、完了通知-->
+        <topic id="speak" listen="false">
+            <action index="1">
+                <speech>${memory_p:news_text}</speech>
+                <behavior id="assign" type="normal"/>
+            </action>
+            <action index="2">
+                <behavior id="assign" type="normal"/>
+                <control target="com.robohon.nhknews" function="speech_done"/>
+            </action>
+        </topic>
+    </body>
+</hvml>
