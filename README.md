@@ -1,0 +1,44 @@
+# RoBoHoN NHKニュース読み上げアプリ
+
+NHKのRSSフィードを1時間ごとに取得し、ロボホンが未読ニュースを読み上げるアプリです。
+
+## インストール方法
+
+### Windows の場合
+
+1. [リリースページ](https://github.com/relinquisher/robohon-nhk-news/releases/latest) から `NHKNews_RoBoHoN_v1.0_Windows.zip` をダウンロード
+2. ZIPを解凍する
+3. ロボホンをUSBケーブルでPCに接続する
+4. `install.bat` をダブルクリックする
+5. 画面の案内に従う（USBデバッグの設定手順も表示されます）
+
+### Mac の場合
+
+1. [リリースページ](https://github.com/relinquisher/robohon-nhk-news/releases/latest) から `NHKNews_RoBoHoN_v1.0_mac.zip` をダウンロード
+2. ZIPを解凍する
+3. ロボホンをUSBケーブルでMacに接続する
+4. **ターミナル**を開く
+   - Finder →「アプリケーション」→「ユーティリティ」→「ターミナル」
+   - または Spotlight（⌘ + Space）で「ターミナル」と検索
+5. ターミナルに以下を入力してEnterを押す（フォルダの場所は実際の解凍先に合わせてください）
+   ```
+   bash /Users/あなたのユーザー名/Downloads/release-mac/install.sh
+   ```
+   または、ターミナルに `bash ` と入力してから `install.sh` をドラッグ＆ドロップしてEnterを押す
+6. 画面の案内に従う
+
+> **Macでの注意点**  
+> 初めてロボホンを接続したとき、Macの「システム設定」→「プライバシーとセキュリティ」で  
+> 「アクセサリの接続を許可」のダイアログが表示される場合があります。「許可」をクリックしてください。
+
+## 機能
+
+- NHK RSSフィード（社会カテゴリ）を**1時間ごとに自動取得**
+- **未読ニュースのみ**読み上げ（同じニュースは2度読まない）
+- **静寂時間帯**の設定（デフォルト 23:00〜07:00 は読み上げなし）
+- ロボホン**再起動後も自動で再開**
+
+## 動作環境
+
+- ロボホン（Android 8.0）
+- インストールPC：Windows または Mac（ADB環境不要・同梱済み）
